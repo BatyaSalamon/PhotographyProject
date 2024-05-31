@@ -13,6 +13,7 @@ public partial class Customer
 
     public string ChatanName { get; set; } = null!;
 
+
     public string Hall { get; set; } = null!;
 
     public int PhotographerId { get; set; }

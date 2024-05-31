@@ -45,9 +45,12 @@ namespace Bl.BlServices
 
         }
 
-        public BLAllCustomer Put(int id)
+        public BLAllCustomer Put(BLAllCustomer t)
         {
-            throw new NotImplementedException();
+            Customer c = mapper.Map<Customer>(t);
+            dalManager.Put(c);
+            return mapper.Map<BLAllCustomer>(c);
+
         }
         public BLAllCustomer Delete(int id)
         {

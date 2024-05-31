@@ -31,6 +31,11 @@ namespace Bl.BlServices
             return mapper.Map<BLPhotographer>(dalManager.Get(id));
         }
 
+        public List<BLPhotographer> GetCustomersByDate(DateOnly )
+        {
+            return mapper.Map<BLPhotographer>(dalManager.Get(id));
+        }
+
         public BLPhotographer Post(BLPhotographer t)
         {
             Photographer p = mapper.Map<Photographer>(t);
@@ -38,7 +43,7 @@ namespace Bl.BlServices
             return mapper.Map<BLPhotographer>(p);
         }
 
-        public BLPhotographer Put(int id)
+        public BLPhotographer Put(BLPhotographer t)
         {
             throw new NotImplementedException();
         }

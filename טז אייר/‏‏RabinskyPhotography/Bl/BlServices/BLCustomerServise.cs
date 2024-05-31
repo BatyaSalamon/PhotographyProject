@@ -41,7 +41,7 @@ namespace Bl.BlServices
 
         }
 
-        public BLCustomer Put(int id)
+        public BLCustomer Put(BLCustomer t)
         {
             throw new NotImplementedException();
         }

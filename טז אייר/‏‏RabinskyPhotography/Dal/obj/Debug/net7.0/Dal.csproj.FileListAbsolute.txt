@@ -166,3 +166,17 @@ C:\Users\1\Desktop\PhotographyProject\יג אייר\‏‏RabinskyPhotography\Da
 C:\Users\1\Desktop\PhotographyProject\יג אייר\‏‏RabinskyPhotography\Dal\obj\Debug\net7.0\Dal.pdb
 C:\Users\1\Desktop\PhotographyProject\יג אייר\‏‏RabinskyPhotography\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
 C:\Users\1\Desktop\PhotographyProject\יג אייר\‏‏RabinskyPhotography\Dal\obj\Debug\net7.0\ref\Dal.dll
+C:\Users\1\Desktop\PhotographyProject\טז אייר\‏‏RabinskyPhotography\Dal\bin\Debug\net7.0\Dal.deps.json
+C:\Users\1\Desktop\PhotographyProject\טז אייר\‏‏RabinskyPhotography\Dal\bin\Debug\net7.0\Dal.runtimeconfig.json
+C:\Users\1\Desktop\PhotographyProject\טז אייר\‏‏RabinskyPhotography\Dal\bin\Debug\net7.0\Dal.dll
+C:\Users\1\Desktop\PhotographyProject\טז אייר\‏‏RabinskyPhotography\Dal\bin\Debug\net7.0\Dal.pdb
+C:\Users\1\Desktop\PhotographyProject\טז אייר\‏‏RabinskyPhotography\Dal\obj\Debug\net7.0\Dal.csproj.AssemblyReference.cache
+C:\Users\1\Desktop\PhotographyProject\טז אייר\‏‏RabinskyPhotography\Dal\obj\Debug\net7.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1\Desktop\PhotographyProject\טז אייר\‏‏RabinskyPhotography\Dal\obj\Debug\net7.0\Dal.AssemblyInfoInputs.cache
+C:\Users\1\Desktop\PhotographyProject\טז אייר\‏‏RabinskyPhotography\Dal\obj\Debug\net7.0\Dal.AssemblyInfo.cs
+C:\Users\1\Desktop\PhotographyProject\טז אייר\‏‏RabinskyPhotography\Dal\obj\Debug\net7.0\Dal.csproj.CoreCompileInputs.cache
+C:\Users\1\Desktop\PhotographyProject\טז אייר\‏‏RabinskyPhotography\Dal\obj\Debug\net7.0\Dal.dll
+C:\Users\1\Desktop\PhotographyProject\טז אייר\‏‏RabinskyPhotography\Dal\obj\Debug\net7.0\refint\Dal.dll
+C:\Users\1\Desktop\PhotographyProject\טז אייר\‏‏RabinskyPhotography\Dal\obj\Debug\net7.0\Dal.pdb
+C:\Users\1\Desktop\PhotographyProject\טז אייר\‏‏RabinskyPhotography\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
+C:\Users\1\Desktop\PhotographyProject\טז אייר\‏‏RabinskyPhotography\Dal\obj\Debug\net7.0\ref\Dal.dll

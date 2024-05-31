@@ -39,9 +39,11 @@ namespace Bl.BlServices
             return mapper.Map<BLPrice>(p);
         }
 
-        public BLPrice Put(int id)
+        public BLPrice Put(BLPrice t)
         {
-            throw new NotImplementedException();
+            Price p = mapper.Map<Price>(t);
+            dalManager.Put(p);
+            return mapper.Map<BLPrice>(p);
         }
 
         public BLPrice Delete(int id)

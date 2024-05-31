@@ -7,7 +7,7 @@ namespace Bl.BlApi
         List<T> GetAll();
         T Get(int id);
         T Post(T t);
-        T Put(int id);
+        T Put(T t);
         T Delete(int id);
     }
 }

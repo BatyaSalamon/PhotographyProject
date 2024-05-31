@@ -1,5 +1,8 @@
 ﻿
 
+using Bl.BlModels;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+
 namespace Server.Controllers
 {
     [Route("api/[controller]")]
@@ -11,46 +14,63 @@ namespace Server.Controllers
         {
             this.blManagerAllCustomers = blManager.AllCustomer;
         }
+        //לבדוק שאין דרך יותר יפה 
 
         [HttpGet]
-        public IActionResult GetAll()
+        public IActionResult GetAll([FromQuery] string? phon=null)
         {
-            if (blManagerAllCustomers.GetAll() != null)
+            if(phon != null)
+            {
+                if (blManagerAllCustomers.GetByPhon(phon) != null)
+                {
+                    return Ok(blManagerAllCustomers.GetByPhon(phon));
+
+                }
+            }
+
+            else if (blManagerAllCustomers.GetAll() != null)
             {
                 return Ok(blManagerAllCustomers.GetAll());
 
             }
             return BadRequest();
         }
-        //לבדוק מה קורה אם אני רוצה גם  getById
-        //[HttpGet("{id}")]
-        //public IActionResult Get(int id)
-        //{
-        //    if (blManagerAllCustomers.Get(id) != null)
-        //    {
-        //        return Ok(blManagerAllCustomers.Get(id));
-        //    }
-        //    return BadRequest();
-        //}
-
-        [HttpGet("{phon}")]
-        public IActionResult GetByPhon(string phon)
+        //לבדוק מה קורה אם אני רוצה גם getById
+        [HttpGet("{id}")]
+        public IActionResult Get(int id)
         {
-            if (blManagerAllCustomers.GetByPhon(phon) != null)
+            if (blManagerAllCustomers.Get(id) != null)
             {
-                return Ok(blManagerAllCustomers.GetByPhon(phon));
+                return Ok(blManagerAllCustomers.Get(id));
             }
             return BadRequest();
         }
 
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
+        //[HttpGet("{phon}")]
+        //public IActionResult GetByPhon(string phon)
+        //{
+        //    if (blManagerAllCustomers.GetByPhon(phon) != null)
+        //    {
+        //        return Ok(blManagerAllCustomers.GetByPhon(phon));
+        //    }
+        //    return BadRequest();
+        //}
 
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPost]
+        public void Post([FromBody] BLAllCustomer value)
         {
+            blManagerAllCustomers.Post(value);
+        }
+        //לא עובד לבדוק למה וגם פוסט-אותו שגיאה
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, [FromBody] BLAllCustomer value)
+        {
+            if (blManagerAllCustomers.Get(id) != null)
+            {
+                return Ok(blManagerAllCustomers.Put(value));
+            }
+            return BadRequest();
+            
         }
 
         [HttpDelete("{id}")]

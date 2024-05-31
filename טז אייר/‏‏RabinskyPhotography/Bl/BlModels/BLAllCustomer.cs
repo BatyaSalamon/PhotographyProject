@@ -9,6 +9,7 @@ namespace Bl.BlModels
 {
     public class BLAllCustomer
     {
+        public int Id { get; set; }
 
         public string KalaName { get; set; } = null!;
 
@@ -22,5 +23,15 @@ namespace Bl.BlModels
         [JsonIgnore]
 
         public virtual Photographer Photographer { get; set; } = null!;
+
+        public BLAllCustomer(int id,string kalaName, string chatanName, string hall, int photographerId, string phone)
+        {
+            Id = id;
+            KalaName = kalaName;
+            ChatanName = chatanName;
+            Hall = hall;
+            PhotographerId = photographerId;
+            Phone = phone;
+        }
     }
 }

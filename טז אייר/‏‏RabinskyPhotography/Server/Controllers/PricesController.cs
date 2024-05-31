@@ -2,6 +2,7 @@
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
+using Bl.BlModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Server.Controllers
@@ -47,8 +48,13 @@ namespace Server.Controllers
 
 
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IActionResult Put(int id, [FromBody] BLPrice value)
         {
+            if (blManagerPrices.Get(id) != null)
+            {
+                return Ok(blManagerPrices.Put(value));
+            }
+            return BadRequest();
         }
 
 
