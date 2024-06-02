@@ -1,0 +1,5 @@
+Scaffold-DbContext 'Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="C:\Users\אלתר רחל\Desktop\RabinskyPhotography\Dal\DB\RabinskyPhotographyDB.mdf";Integrated Security=True;Connect Timeout=30' Microsoft.EntityFrameworkCore.SqlServer –Context LibraryContext -OutputDir Do  -Force
+1.ה scaffold שמתאים לסמינר (על השם משתמש של אלתר רחל)
+
+Scaffold-DbContext 'Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="C:\Users\USER\Desktop\PhotographyProject\טז אייר\‏‏RabinskyPhotography\Dal\DB\RabinskyPhotographyDB.mdf";Integrated Security=True;Connect Timeout=30' Microsoft.EntityFrameworkCore.SqlServer –Context LibraryContext -OutputDir Do  -Force
+2.ה scaffold שמתאים למחשב של רחלי
