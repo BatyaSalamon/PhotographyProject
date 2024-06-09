@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OeJX9pOJcCZie47uUFvfT9u4frzp5xa+Vv1CGw/WBqKE5qdaM2tjGnz0An6r3O5EVMGqwPbyW8f7Dk+VCB8NlA==",
+  "dgSpecHash": "bcIb2aZr0T/shN/GUuENlKJp3JLyirUZkzAsg1OGgkaZ6CO+y+hfFnsT3eSbjsWe4nxpGNKXaAWODGb2BHaKGA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\Desktop\\PhotographyProject\\טז אייר\\‏‏RabinskyPhotography\\Server\\Server.csproj",
+  "projectFilePath": "C:\\Users\\USER\\Desktop\\PhotographyProject\\כג אייר\\‏‏RabinskyPhotography\\Server\\Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\automapper.extensions.enummapping\\3.2.0\\automapper.extensions.enummapping.3.2.0.nupkg.sha512",

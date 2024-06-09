@@ -1,6 +1,10 @@
 ﻿
 
 
+using Dal.Do;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+
 namespace Bl.BlServices
 {
     public class BLPhotographerServise : IBLPhotographer
@@ -30,10 +34,21 @@ namespace Bl.BlServices
             return mapper.Map<BLPhotographer>(dalManager.Get(id));
         }
 
-        //public List<BLPhotographer> GetCustomersByDate(DateOnly )
-        //{
-        //    return mapper.Map<BLPhotographer>(dalManager.Get(id));
-        //}
+        public List<BLCustomer> GetCustomersByDate(DateTime? date, int id)
+        {
+
+            Photographer p = dalManager.Get(id);
+            //List<Customer> c=p.Customers.Where(c=>c.WeddingDate==date).ToList();
+            List<Customer> c = p.Customers.ToList();
+            List<BLCustomer> n = new List<BLCustomer>();
+            for (int i = 0; i < c.Count; i++)
+            {
+                n.Add(mapper.Map<BLCustomer>(c[i]));
+            }
+            return n;
+
+
+        }
 
         public BLPhotographer Post(BLPhotographer t)
         {
@@ -50,6 +65,6 @@ namespace Bl.BlServices
         {
             throw new NotImplementedException();
         }
-       
+
     }
 }

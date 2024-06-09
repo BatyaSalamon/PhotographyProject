@@ -9,7 +9,8 @@ namespace Bl.BlModels
         {
             this.FirstName = firstName;
             this.LastName = lastName;            
-            this.PriceCodeNavigation = new BLPrice(priceCodeNavigation.Code,priceCodeNavigation.PriceFor320Photos, priceCodeNavigation.PriceForAnAdditionalHourBeyond7Hours, priceCodeNavigation.PriceForAnAdditionalHourAfter1Am /*priceCodeNavigation.Photographers*/);
+            this.PriceCodeNavigation = priceCodeNavigation;
+            //this.PriceCodeNavigation = new BLPrice(priceCodeNavigation.Code,priceCodeNavigation.PriceFor320Photos, priceCodeNavigation.PriceForAnAdditionalHourBeyond7Hours, priceCodeNavigation.PriceForAnAdditionalHourAfter1Am /*priceCodeNavigation.Photographers*/);
         }
         public string? FirstName { get; set; }
 

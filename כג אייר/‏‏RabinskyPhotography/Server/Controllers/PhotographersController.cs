@@ -26,15 +26,27 @@ namespace Server.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult Get(int id)
+        public IActionResult Get(int id, [FromQuery] DateTime? date=null)
         {
-            if (blManagerPhotographers.Get(id) != null)
+            if (date == null)
             {
-                return Ok(blManagerPhotographers.Get(id));
+                if (blManagerPhotographers.Get(id) != null)
+                {
+                    return Ok(blManagerPhotographers.Get(id));
+                }
+          
             }
-            return BadRequest();
-        }
+            else if(date!=null) { 
+            
+                if (blManagerPhotographers.Get(id) != null)
+                {
+                    return Ok(blManagerPhotographers.GetCustomersByDate(date, id));
+                }
+           
+            }
+                    return BadRequest();
 
+        }
 
         [HttpPost]
         public void Post([FromBody] string value)
