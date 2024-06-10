@@ -7,7 +7,7 @@ namespace Dal.DalApi
         List<T> GetAll() ;
         T Get(int id);
         T Post(T t) ;
-        T Put(T t);
+        T Put(int id,T t);
         T Delete(int id) ;
      
             

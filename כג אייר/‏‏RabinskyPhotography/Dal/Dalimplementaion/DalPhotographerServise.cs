@@ -48,11 +48,11 @@ namespace Dal.Dalimplementaion
             return t;
         }
 
-        public Photographer Put(Photographer t)
+        public Photographer Put(int id, Photographer t)
         {
-            context.Photographers.FirstOrDefault(p => p.Id == t.Id).FirstName = t.FirstName;
-            context.Photographers.FirstOrDefault(p => p.Id == t.Id).LastName = t.LastName;
-            context.Photographers.FirstOrDefault(p => p.Id == t.Id).PriceCode = t.PriceCode;
+            context.Photographers.FirstOrDefault(p => p.Id == id).FirstName = t.FirstName;
+            context.Photographers.FirstOrDefault(p => p.Id == id).LastName = t.LastName;
+            context.Photographers.FirstOrDefault(p => p.Id == id).PriceCode = t.PriceCode;
           
             context.SaveChanges();
             return t;

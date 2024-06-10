@@ -50,7 +50,7 @@ namespace Server.Controllers
         {
             if (blManagerPrices.Get(id) != null)
             {
-                return Ok(blManagerPrices.Put(value));
+                return Ok(blManagerPrices.Put(id, value));
             }
             return BadRequest();
         }

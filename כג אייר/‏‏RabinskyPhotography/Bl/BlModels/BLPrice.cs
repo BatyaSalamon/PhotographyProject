@@ -5,7 +5,7 @@ namespace Bl.BlModels
     public class BLPrice
     {
 
-        public int Code { get; set; }
+        //public int Code { get; set; }
         public int PriceFor320Photos { get; set; }
 
         public int PriceForAnAdditionalHourBeyond7Hours { get; set; }
@@ -14,9 +14,9 @@ namespace Bl.BlModels
 
         //public virtual ICollection<BLPhotographer> Photographers { get; set; } 
 
-        public BLPrice(int Code, int priceFor320Photos, int priceForAnAdditionalHourBeyond7Hours, int priceForAnAdditionalHourAfter1Am/*, ICollection<BLPhotographer> photographers*/)
+        public BLPrice(/*int Code*/ int priceFor320Photos, int priceForAnAdditionalHourBeyond7Hours, int priceForAnAdditionalHourAfter1Am/*, ICollection<BLPhotographer> photographers*/)
         {
-            this.Code = Code;
+            
             //this.Photographers = photographers;
             this.PriceFor320Photos = priceFor320Photos;
             this.PriceForAnAdditionalHourBeyond7Hours = priceForAnAdditionalHourBeyond7Hours;

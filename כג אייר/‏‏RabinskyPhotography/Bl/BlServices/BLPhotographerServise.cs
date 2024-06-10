@@ -72,7 +72,7 @@ namespace Bl.BlServices
             return mapper.Map<BLPhotographer>(p);
         }
 
-        public BLPhotographer Put(BLPhotographer t)
+        public BLPhotographer Put(int id, BLPhotographer t)
         {
             throw new NotImplementedException();
         }

@@ -27,11 +27,11 @@ namespace Dal.Dalimplementaion
             return t;
         }
 
-        public Price Put(Price t)
+        public Price Put(int id, Price t)
         {
-            context.Prices.FirstOrDefault(p => p.Code == t.Code).PriceForAnAdditionalHourBeyond7Hours = t.PriceForAnAdditionalHourBeyond7Hours;
-            context.Prices.FirstOrDefault(p => p.Code == t.Code).PriceFor320Photos = t.PriceFor320Photos;
-            context.Prices.FirstOrDefault(p => p.Code == t.Code).PriceForAnAdditionalHourAfter1Am = t.PriceForAnAdditionalHourAfter1Am;
+            context.Prices.FirstOrDefault(p => p.Code == id).PriceForAnAdditionalHourBeyond7Hours = t.PriceForAnAdditionalHourBeyond7Hours;
+            context.Prices.FirstOrDefault(p => p.Code == id).PriceFor320Photos = t.PriceFor320Photos;
+            context.Prices.FirstOrDefault(p => p.Code == id).PriceForAnAdditionalHourAfter1Am = t.PriceForAnAdditionalHourAfter1Am;
            
             context.SaveChanges();
             return t;

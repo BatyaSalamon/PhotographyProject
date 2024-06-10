@@ -4,7 +4,7 @@ namespace Bl.BlModels
 {
     public class BLAllCustomer
     {
-        public int Id { get; set; }
+        //public int Id { get; set; }
 
 
         public string KalaName { get; set; } = null!;
@@ -18,13 +18,13 @@ namespace Bl.BlModels
         public int PhotographerId { get; set; } = 0;
 
         public string Phone { get; set; } = null!;
-        [JsonIgnore]
+        //[JsonIgnore]
 
-        public virtual Photographer Photographer { get; set; } = null!;
+        //public virtual Photographer Photographer { get; set; } = null!;
 
-        public BLAllCustomer(int id,string kalaName, string chatanName, string hall, DateTime weddingDate, int photographerId, string phone)
+        public BLAllCustomer(/*int id,*/string kalaName, string chatanName, string hall, DateTime weddingDate, int photographerId, string phone)
         {
-            Id = id;
+            //Id = id;
             KalaName = kalaName;
             ChatanName = chatanName;
             Hall = hall;

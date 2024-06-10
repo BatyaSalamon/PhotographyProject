@@ -34,13 +34,12 @@ namespace Dal.Dalimplementaion
             
         }
 
-        public Customer Put(Customer t)
+        public Customer Put(int id, Customer t)
         {
-            context.Customers.FirstOrDefault(p => p.Id == t.Id).PhotographerId = t.PhotographerId;
-            context.Customers.FirstOrDefault(p => p.Id == t.Id).Hall=t.Hall;
-            context.Customers.FirstOrDefault(p => p.Id == t.Id).ChatanName = t.ChatanName;
-            context.Customers.FirstOrDefault(p => p.Id == t.Id).KalaName = t.KalaName;
-            context.Customers.FirstOrDefault(p => p.Id == t.Id).Phone=t.Phone;
+            context.Customers.FirstOrDefault(p => p.Id == id).Hall=t.Hall;
+            context.Customers.FirstOrDefault(p => p.Id == id).ChatanName = t.ChatanName;
+            context.Customers.FirstOrDefault(p => p.Id == id).KalaName = t.KalaName;
+            context.Customers.FirstOrDefault(p => p.Id == id).Phone=t.Phone;
             context.SaveChanges();
             return t;
 

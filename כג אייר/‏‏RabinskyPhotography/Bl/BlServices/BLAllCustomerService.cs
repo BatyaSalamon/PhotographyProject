@@ -44,11 +44,10 @@ namespace Bl.BlServices
 
         }
 
-        public BLAllCustomer Put(BLAllCustomer t)
+        public BLAllCustomer Put(int id, BLAllCustomer t)
         {
             Customer c = mapper.Map<Customer>(t);
-            dalManager.Put(c);
-            return mapper.Map<BLAllCustomer>(c);
+            return mapper.Map<BLAllCustomer>(dalManager.Put(id, c));
 
         }
         public BLAllCustomer Delete(int id)

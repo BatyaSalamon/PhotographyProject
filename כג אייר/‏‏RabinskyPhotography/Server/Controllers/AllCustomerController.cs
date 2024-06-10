@@ -65,7 +65,7 @@ namespace Server.Controllers
         {
             if (blManagerAllCustomers.Get(id) != null)
             {
-                return Ok(blManagerAllCustomers.Put(value));
+                return Ok(blManagerAllCustomers.Put(id, value));
             }
             return BadRequest();
             

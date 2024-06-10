@@ -39,10 +39,10 @@ namespace Bl.BlServices
             return mapper.Map<BLPrice>(p);
         }
 
-        public BLPrice Put(BLPrice t)
+        public BLPrice Put(int id, BLPrice t)
         {
             Price p = mapper.Map<Price>(t);
-            dalManager.Put(p);
+            dalManager.Put(id,p);
             return mapper.Map<BLPrice>(p);
         }
 
