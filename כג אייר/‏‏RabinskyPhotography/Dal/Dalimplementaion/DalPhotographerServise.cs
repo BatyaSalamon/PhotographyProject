@@ -10,18 +10,36 @@ namespace Dal.Dalimplementaion
            this.context = context;
         }
 
-
         public List<Photographer> GetAll()
         {
-           IEnumerable<Photographer> photographers=context.Photographers.Include(p=>p.PriceCodeNavigation);
-          return photographers.ToList();
-            
+            IEnumerable<Photographer> photographers = context.Photographers;
+            return photographers.ToList();
+
         }
+
+        public List<Photographer> GetAllWithPrice()
+        {
+            IEnumerable<Photographer> photographers = context.Photographers.Include(p => p.PriceCodeNavigation);
+            return photographers.ToList();
+
+        }
+        public List<Photographer> GetAllWithCustomer()
+        {
+            IEnumerable<Photographer> photographers = context.Photographers.Include(c =>c.Customers);
+            return photographers.ToList();
+
+        }
+
+
 
         public Photographer Get(int id)
         {
             return context.Photographers.FirstOrDefault(c => c.Id == id);
         }
+        //public List<Customer> GetWithCustomers(int id)
+        //{
+        //    return context.Photographers.FirstOrDefault(c => c.Id == id).Customers.ToList();
+        //}
 
         public Photographer Post(Photographer t)
         {

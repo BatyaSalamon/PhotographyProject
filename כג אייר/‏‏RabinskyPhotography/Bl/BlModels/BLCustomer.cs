@@ -4,11 +4,10 @@ namespace Bl.BlModels
 {
     public class BLCustomer
     {
-        public BLCustomer(string kalaName, string chatanName, DateTime weddingDate, string phone)
+        public BLCustomer(string kalaName, string chatanName, string phone)
         {
             KalaName = kalaName;
             ChatanName = chatanName;
-            WeddingDate = weddingDate;
             Phone = phone;
             
         }
@@ -16,7 +15,8 @@ namespace Bl.BlModels
 
         public string ChatanName { get; set; } = null!;
 
-        public DateTime WeddingDate { get; set; }
+       
+        public string Hall { get; set; } = null!;
 
         public string Phone { get; set; } = null!;
 

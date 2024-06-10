@@ -17,10 +17,9 @@ namespace Bl.BlServices
             this.mapper = mapper;
         }
 
-
         public List<BLPhotographer> GetAll()
         {
-            List<Photographer> dalAllPhotographer = dalManager.GetAll();
+            List<Photographer> dalAllPhotographer = dalManager.GetAllWithPrice();
             List<BLPhotographer> blAllPhotographer = new List<BLPhotographer>();
             for (int i = 0; i < dalAllPhotographer.Count(); i++)
             {
@@ -34,18 +33,34 @@ namespace Bl.BlServices
             return mapper.Map<BLPhotographer>(dalManager.Get(id));
         }
 
-        public List<BLCustomer> GetCustomersByDate(DateTime? date, int id)
+        public BLCustomer GetCustomersByDate(DateTime? date, int id)
         {
 
-            Photographer p = dalManager.Get(id);
-            //List<Customer> c=p.Customers.Where(c=>c.WeddingDate==date).ToList();
-            List<Customer> c = p.Customers.ToList();
-            List<BLCustomer> n = new List<BLCustomer>();
-            for (int i = 0; i < c.Count; i++)
+            List<Photographer> c = dalManager.GetAllWithCustomer();
+            Photographer p = c.FirstOrDefault(c => c.Id == id);
+            Customer pc = p.Customers.FirstOrDefault(c=> c.WeddingDate==date);
+
+       
+            return mapper.Map<BLCustomer>(pc);
+
+
+        }
+
+        public List<BLCustomer> GetCustomersByMonth(int month, int id)
+        {
+
+            List<Photographer> c = dalManager.GetAllWithCustomer();
+            Photographer p = c.FirstOrDefault(c => c.Id == id);
+            var pc =p.Customers.Where(c => c.WeddingDate.Month == month);
+            List<Customer> pp = pc.ToList();
+
+            List < BLCustomer > cc=new List<BLCustomer >();
+            for (int i = 0; i < pp.Count; i++)
             {
-                n.Add(mapper.Map<BLCustomer>(c[i]));
+                cc.Add(mapper.Map<BLCustomer>(pp[i]));
             }
-            return n;
+
+            return cc;
 
 
         }

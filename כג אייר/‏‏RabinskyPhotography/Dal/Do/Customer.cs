@@ -18,5 +18,6 @@ public partial class Customer
 
     public DateTime WeddingDate { get; set; }
 
+    [JsonIgnore]
     public virtual Photographer Photographer { get; set; } = null!;
 }
